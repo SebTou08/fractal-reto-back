@@ -26,5 +26,8 @@ public class Product {
     @NotNull
     public float price;
 
+    @OneToMany(mappedBy = "product")
+    private List<OrderProducts> orderProducts;
+
 
 }

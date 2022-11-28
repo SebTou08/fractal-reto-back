@@ -13,15 +13,12 @@ import java.util.List;
 @Getter
 @Setter
 public class SaveOrderResource {
-    @NotNull
-    public String name;
+
     private int orderNumber;
 
     @NotNull
     public Date date;
 
-    @NotNull
-    private float finalPrice;
     public Status status;
 
     //private List<Product> products;

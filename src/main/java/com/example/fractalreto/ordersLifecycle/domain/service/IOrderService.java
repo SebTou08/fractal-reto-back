@@ -5,11 +5,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 
+import java.util.List;
+
 
 public interface IOrderService {
     ResponseEntity<?> deleteOrder(int orderId);
     Order creatOrder(Order order);
     Order updateOrder(int orderId, Order order);
-    Page<Order> getAllOrders(Pageable pageable);
+    List<Order> getAllOrders( );
 
 }

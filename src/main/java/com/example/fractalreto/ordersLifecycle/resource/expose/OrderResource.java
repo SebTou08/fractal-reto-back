@@ -1,5 +1,6 @@
 package com.example.fractalreto.ordersLifecycle.resource.expose;
 
+import com.example.fractalreto.ordersLifecycle.domain.models.OrderProducts;
 import com.example.fractalreto.ordersLifecycle.domain.models.Product;
 import com.example.fractalreto.ordersLifecycle.domain.models.Status;
 import com.sun.istack.NotNull;
@@ -17,5 +18,4 @@ public class OrderResource {
     private Date date;
     private float finalPrice;
     public Status status;
-    private List<Product> products;
 }

@@ -69,20 +69,20 @@ public class OrderService implements IOrderService {
      * @return
      */
     @Override
-    public Page<Order> getAllOrders(Pageable pageable) {
-        return orderRepository.findAll(pageable);
+    public List<Order> getAllOrders() {
+        return orderRepository.findAll();
     }
 
-    public void assignProducts(SaveProductOrder dto){
-        List<Product> products = new ArrayList<>();
-        Order order = orderRepository.findById(dto.getOrderId()).orElseThrow();
-        for(int i = 0; i<dto.getProductsIds().size(); i++){
-            Product product = productRepository.findById(dto.getProductsIds().get(i)).orElseThrow();
-            products.add(product);
-        }
-
-        order.setProducts(products);
-        System.out.println(order);
-        orderRepository.save(order);
-    }
+//    public void assignProducts(SaveProductOrder dto){
+//        List<Product> products = new ArrayList<>();
+//        Order order = orderRepository.findById(dto.getOrderId()).orElseThrow();
+//        for(int i = 0; i<dto.getProductsIds().size(); i++){
+//            Product product = productRepository.findById(dto.getProductsIds().get(i)).orElseThrow();
+//            products.add(product);
+//        }
+//
+//        order.setProducts(products);
+//        System.out.println(order);
+//        orderRepository.save(order);
+//    }
 }
